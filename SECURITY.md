@@ -58,7 +58,7 @@ O pacote `ip` versão 2.0.1 e anteriores possui uma vulnerabilidade de SSRF (Ser
 Esta vulnerabilidade existe devido a uma correção incompleta da CVE-2023-42282.
 
 #### Mitigação
-Removida a resolução forçada do pacote `ip@2.0.1` do `package.json`. O pacote `ip` não é usado diretamente neste projeto, sendo apenas uma dependência transitiva. Como não há versão corrigida disponível (first_patched_version: null), a remoção da resolução permite que as dependências gerenciem suas próprias versões do pacote.
+Removida a resolução forçada do pacote `ip@2.0.1` do `package.json`. O pacote `ip` não é usado diretamente neste projeto, sendo apenas uma dependência transitiva. Como não há versão corrigida disponível (first_patched_version: null), a remoção da resolução permite que as dependências gerenciem suas próprias versões do pacote. Isso significa que o pacote `ip` ainda pode estar presente na árvore de dependências por meio de outras bibliotecas, porém em versões determinadas pelos requisitos dessas dependências, potencialmente diferentes (e possivelmente mais seguras) do que a versão explicitamente fixada anteriormente.
 
 #### Referências
 - [GHSA-2p57-rm9w-gvfp](https://github.com/advisories/GHSA-2p57-rm9w-gvfp)
