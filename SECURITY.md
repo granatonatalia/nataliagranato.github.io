@@ -49,7 +49,7 @@ Este projeto segue as seguintes práticas:
 ### CVE-2024-29415: ip package SSRF vulnerability
 
 **Status**: Mitigado  
-**Data**: 2025-12-30  
+**Data**: 2025-12-31  
 **Severidade**: Alta
 
 #### Descrição
